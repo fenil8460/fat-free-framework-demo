@@ -16,9 +16,11 @@ git clone https://github.com/fenil8460/fat-free-framework-demo.git
 composer install/composer update
 ```
 ```
-Then you need to add you database credintial in config.ini file
+Then you need to add your database credentials in config.ini file
+```
 
-![](screenshots/Screenshot4.png)
+![](screenshots/Screenshot5.png)
+
 
 You can then run the web application using PHP's built-in server:
 
@@ -35,3 +37,5 @@ The web application is running at [http://localhost:8000](http://localhost:8000/
 ![](screenshots/Screenshot2.png)
 
 ![](screenshots/Screenshot3.png)
+
+![](screenshots/Screenshot4.png)

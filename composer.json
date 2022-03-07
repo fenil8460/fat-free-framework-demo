@@ -1,0 +1,12 @@
+{
+    "name": "takacsmark/fatfreetutorial1",
+    "authors": [
+        {
+            "name": "Fenil Mendapara",
+            "email": "mendapara.fenil.kh@gmail.com"
+        }
+    ],
+    "require": {
+    	"bcosca/fatfree": "3.5.0"
+    }
+}

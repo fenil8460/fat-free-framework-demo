@@ -1,0 +1,149 @@
+<include href="header.htm"/>
+		<div class="section-1">
+			<div class="container">
+			 	<div class="head-text">
+			 			<h1>About Jane’s Design Studio</h1>
+			 	</div>
+			 		<div class="text-box">
+				 		<div class="flex_row">
+				 				<div class="box box-1">
+				 					<div class="img-box">
+				 						<img src="app/images/img-1.png">
+				 				    </div>
+				 					<div class="sub-text">
+				 						<h5>JANE DOE {{@BASE}}</h5>
+										<p>Autdr auartaoy eoehrtmecs hrusn arvce eaile soytlr tash ciloon satnire. Hoart thtet eemhne gorgn vynigt tigine pasioiie port</p>
+				 					</div>
+				 				</div>
+				 				<div class="box box-2">
+				 					<div class="sub-text">
+				 						<p>Autdr auartaoy eoehrtmecs hrusn arvce eaile soytlr tash ciloon satnire. Hoart thtet eemhne gorgn vynigt tigine pasioiie port hhmt hitierd pnldered dhmieg arvsn. Baow cwl ylorn chg gored potjlav aupshiae totuen wovdd sutuhien hotn. Hrwy exciecteut atrder erdsuiag woe enruea for saom. Hdoat wisp eorsucor mn poihirr iaveoenpacs otse pdhiroad. Wnnmgt saaek mhdhn stoae pojrudid gose siany ccers coalute crbr. Vttr catrle stdst haay inhiirie dutetvcd deaeaiuos fase.
+										</p>
+										<p>
+										Mabt bomllnt dmriilf ilrohs tonlecsnee cun fevtene poohreeh caorroee delegisenr peoduab. Goaloee rtnel sepite pmtruaitr dhtecduan bele taick wngirn. Hhrnl dhrln shrildeny cin slslmbot seen. Iiah pegtog prruey ingiituniof felseee wotw riwe hier. Ar clcte sxowek bgigt higiant rviad nhtx ser ler peey moterh ttsnt.</p>
+				 					</div>
+				 				</div>
+				 				<div class="box box-3">
+									 <form method="POST" action="/add-contact">
+				 					<div class="form-box">
+				 						<div class="input-box">
+				 							<input type="text" id="name" name="name" placeholder="Name" required>
+				 						</div>
+				 					</div>
+				 					<div class="form-box">
+				 						<div class="input-box">
+				 							<input type="email" id="email" name="email" placeholder="Email" required>
+											 <span id="result"></span>
+				 						</div>
+				 					</div>
+				 					<div class="form-box">
+				 						<div class="input-box">
+				 							<input type="text" id="phone" name="phone" placeholder="Phone" required>
+											 <span id="phone_error"></span>
+				 						</div>
+				 					</div>
+				 					<div class="condition">
+				 						  <label class="checkbox" for="checkbox-eins">
+											   <input type="checkbox" id="checkbox-eins" >
+				 						  	  <!-- <div class="checkbox__indicator"></div> -->
+										      <span class="checkbox__label">Confirm we can contact you</span>
+										  </label>
+				 					</div>
+				 					<div class="btn-sec">
+										<span id="confirm_error"></span>
+				 						<button id="submit_btn">Contact</button>
+				 					</div>
+								</form>
+				 				</div>
+				 			</div>
+			 			</div>
+			 		</div>
+			 	</div>
+                <div class="container">
+				 	<div class="sec-map">
+				 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14878.747169790757!2d72.92046546442808!3d21.204597674451772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be045094db79967%3A0xd946d584a0fa0a21!2sKosmada%2C%20Gujarat%20395006!5e0!3m2!1sen!2sin!4v1646482379814!5m2!1sen!2sin" width="100%" height="186px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				 	</div>
+			 	</div>
+		</div>	
+	</div>
+</body>
+<script>
+
+	$(document).ready(function(){
+
+	$( "#name" ).change(function() {
+		console.log('test');
+	  });
+	  const validateEmail = (email) => {
+		return email.match(
+		  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+		);
+	  };
+	  
+	  const validate = () => {
+		const $result = $('#result');
+		const email = $('#email').val();
+		$result.text('');
+		$result.css('background-color', 'unset');
+		$result.css('padding', 'unset');
+		$result.css('margin', 'unset');
+		$('#email').css('margin-bottom','unset')
+		if (!validateEmail(email)) {
+			$result.text(email + ' is not valid');
+			$result.css('color', 'red');
+			$result.css('background-color', '#fff');
+			$result.css('padding', '10px');
+			$result.css('margin', '10px');
+			$('#email').css('margin-bottom','15px')
+		} 
+		return false;
+	  }
+
+	  const phone_validate = () => {
+		const $result = $('#phone_error');
+		const phone = $('#phone').val();
+		$result.text('');
+		$result.css('background-color', 'unset');
+		$result.css('padding', 'unset');
+		$result.css('margin', 'unset');
+		$('#phone').css('margin-bottom','unset')
+		if (!validatePhone(phone)) {
+			$result.text(phone + ' is not valid');
+			$result.css('color', 'red');
+			$result.css('background-color', '#fff');
+			$result.css('padding', '10px');
+			$result.css('margin', '10px');
+			$('#phone').css('margin-bottom','15px')
+
+		} 
+		return false;
+	  }
+	  
+	  $( "#email" ).on('change', validate);
+	  $( "#phone" ).on('change', phone_validate);
+
+	  const validatePhone = (phone) => {
+		return phone.match(/^(?:(?:00)?44|0)7(?:[45789]\d{2}|624)\d{6}$/);
+	  };
+	  if($("#checkbox-eins")[0].checked){
+		const $result = $('#confirm_error');
+		$result.text('');
+	  }
+	  $("#submit_btn").click(function(){
+		  const $result = $('#confirm_error');
+		  if(!$("#checkbox-eins")[0].checked){
+			$result.text('Please check');
+			$result.css('color', 'red');
+			$result.css('background-color', '#fff');
+			$result.css('padding', '10px');
+			$result.css('margin', '10px');
+			$("#submit_btn").css('margin-top','15px');
+			  return false
+		  }
+	  })
+
+	})
+
+
+</script>
+</html>

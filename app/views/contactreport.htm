@@ -1,0 +1,31 @@
+            <include href="header.htm"/>
+			 	<div class="section-1">
+			 		<div class="container">
+			 			<div class="text-box">
+				 			<div class="flex_row">
+								 <table class="contact-report">
+									<tr>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Phone Number</th>
+										<th>Action</th>
+									</tr>
+									<repeat group="{{ @contacts }}" value="{{ @contact }}">
+										<tr>
+											<td>{{ @contact.name }}</td>
+											<td>{{ @contact.email }}</td>
+											<td>{{ @contact.phone }}</td>
+											<td><a href="/delete/{{@contact.id}}">Delete</a></td>
+										</tr>
+									</repeat>
+								</table>
+				 			</div>
+			 			</div>
+			 		</div>
+			 	</div>
+		</div>	
+	</div>
+
+</body>
+
+</html>

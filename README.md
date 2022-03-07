@@ -24,7 +24,7 @@ composer install
 You can then run the web application using PHP's built-in server:
 
 ```
-php -S 0.0.0.0:8000 -t web/
+php -S localhost:8000
 ```
 
 The web application is running at [http://localhost:8000](http://localhost:8000/).

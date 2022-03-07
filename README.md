@@ -15,6 +15,10 @@ To run this demo, you need to clone it and install dependencies:
 git clone https://github.com/fenil8460/fat-free-framework-demo.git
 composer install/composer update
 ```
+```
+Then you need to add you database credintial in config.ini file
+
+![](screenshots/Screenshot4.png)
 
 You can then run the web application using PHP's built-in server:
 

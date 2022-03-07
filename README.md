@@ -16,7 +16,7 @@ Improvements and pull requests are welcome.
 To run this demo, you need to clone it and install dependencies:
 
 ```
-git clone https://github.com/PHP-DI/demo.git
+git clone https://github.com/fenil8460/fat-free-framework-demo.git
 cd demo/
 composer install
 ```

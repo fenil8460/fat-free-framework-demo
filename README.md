@@ -1,10 +1,5 @@
-# fat-free-framework-demo
+# Fat Free Framework Demo
 this demo for the how to submit contact form and his validation using PHP fat free framework.
-
-
-# PHP-DI application demo
-
-This repository demonstrates how to write a simple application using PHP-DI without any framework.
 
 ## Screenshot
 
@@ -33,26 +28,3 @@ php -S 0.0.0.0:8000 -t web/
 ```
 
 The web application is running at [http://localhost:8000](http://localhost:8000/).
-
-You can also run the CLI application:
-
-```
-php console.php
-```
-
-The following commands are available:
-
-- `php console.php articles`: lists the blog articles
-- `php console.php article [id]`: displays a blog article by its ID
-
-## Architecture
-
-The container is created in [app/bootstrap.php](app/bootstrap.php). The configuration file for the container is [app/config.php](app/config.php).
-
-Both the web application and the CLI application require `app/bootstrap.php` to get the container:
-
-- the web application ([web/index.php](web/index.php)) uses [FastRoute](https://github.com/nikic/FastRoute) for routing, and then creates and invokes the controller using PHP-DI
-- the CLI application ([console.php](console.php)) uses [Silly](http://mnapoli.fr/silly/): Silly uses the container to create and invoke the commands
-
-You will note that in both case, the controllers/commands are instantiated and invoked by PHP-DI: this is to benefit from dependency injection in those classes.
-
